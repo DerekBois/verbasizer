@@ -9,10 +9,12 @@ import { tags } from "./tags.js";
 
 templates.forEach((template, i) => {
   const final = template.replaceAll(/<(.*?)>/g, (_, s) => {
-    return tags[+s][Math.floor(Math.random() * tags[+s].length)];
+    return `<span>${
+      tags[+s][Math.floor(Math.random() * tags[+s].length)]
+    }</span>`;
   });
   document.querySelector("#output").innerHTML +=
-    `<strong>${final}</strong>` + "\n";
+    `<p><strong>${final}</strong></p>` + "\n";
   document.querySelector("#output").innerHTML +=
     originals[i].replace(/</g, "&lt") + "\n\n";
 });

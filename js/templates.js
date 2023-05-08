@@ -33,3 +33,25 @@ He <9> and <3>
 As <1> <4>
 `,
 ];
+
+export const originals = [
+  `<Noun Phrase> <Noun Phrase>
+I know <Verb Phrase>, until I get back>
+So <Verb Phrase> babe <and Verb Phrase>
+<Noun Phrase> <Intransitive verb> <Noun Phrase>`,
+  `<Dialogue Phrase>
+You know  <Verb Phrase>
+<Verb Phrase>
+But <Noun Phrase prep>, <Verb Phrase>
+<Verb Phrase>
+`,
+  `<Verb Phrase> on your <Noun Phrase>
+If you <Verb Phrase> try and <and Verb Phrase>
+If I had <Noun Phrase> where <Noun Phrase Prep>
+Before <Noun Phrase> the <Verb Phrase>
+`,
+  `He <Transitive Verb> <Transitive Verb> he <Verb Phrase>
+Then <Transitive Verb> where <Noun Phrase Prep>
+He <Intransitive Verb> and <Verb Phrase>
+As <Noun Phrase> <Verb Phrase Prep>`,
+];

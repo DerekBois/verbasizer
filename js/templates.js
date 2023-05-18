@@ -17,7 +17,8 @@ export const templates = [
   "I ^18, I ^18\nI ^18, ^7\n^g1a ^23 ^15\nI ^23, ^8",
   "^19 ^15\nShe ^18, ^8\n^25\n^25",
   "I ^23 and I ^18\n^15 ^9\n^25\n^25",
-  "^25\n^6 and I ^18\n^25\n^25\nI ^23 ^g1 ^18\n^g1a ^23 ^12\nIn ^23 and I ^18\nAs the ^8 ^17",
+  "^25\n^6 and I ^18\n^25\n^25",
+  "I ^23 ^g1 ^18\n^g1a ^23 ^12\nIn ^23 and I ^18\nAs the ^8 ^17",
   "T'was ^11 ^18\nI ^18, ^6\n^7 ^11\nAnd she ^18",
   "^g1a ^23 and I ^23\n^g2a ^10 they ^23\nThen I ^23 ^15\nAnd I ^23, ^6",
   "^g1 ^18 but ^g1a ^23\n^8 ^g1a ^18",
@@ -27,5 +28,5 @@ export const templates = [
   "I ^18, ^8\nI ^18 and I ^18\nIf I had ^8 ^12\nBefore ^11 ^19",
   "I ^23, ^8 I ^23, ^8\nI ^23, ^8 I ^23, ^8\nI ^23, ^8 I ^23, ^8\nI ^23, ^10 of the ^8",
   "I ^18 and I ^18\nShe ^18, ^6\nI ^18 ^19, I ^18 ^19",
-  "I ^18 with ^22\nDon't I ^18, ^11 you ^18\nDon't I ^18, ^10 ^10\n^11 is ^11",
+  "I ^18 with ^22\nDon't I ^18, ^11 you ^18\nDon't I ^18, ^8 ^10\n^11 is ^11",
 ];

@@ -8,15 +8,18 @@ const newLookup = Object.fromEntries(
 );
 
 form.onsubmit = () => {
-  const value = document.getElementById("ingest").value;
-  const final = value
-    .replaceAll(/<(.*?)>/g, (_, s) => {
+  document
+    .getElementById("ingest")
+    .value.replaceAll(/<(.*?)>/g, (_, s) => {
       if (/^g\d/.test(s)) {
-        return `^${s.replace("m", "").replace("f", "a")}`;
+        return `^${s.replace("s", "")}`;
       }
       return `^${newLookup[s] ?? s}`;
     })
-    .split("\n\n");
-  output.innerHTML = JSON.stringify(final, null, 2);
+    .split("\n\n")
+    .forEach((v) => {
+      output.innerHTML += JSON.stringify(v).replace(/"/g, "`") + ",\n";
+    });
+
   return false;
 };

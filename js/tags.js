@@ -262,7 +262,7 @@ export const tags = [
     `threw the net around ^g4o`,
     `sent for John Lewis`,
     `brought ^g4o out before ^g4`,
-    `killed ^g4o`,
+    `killed ^g4s`,
   ],
   [
     // 24: "intransitive verb",

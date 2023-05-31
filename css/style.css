@@ -3,8 +3,21 @@ body {
   font-family: monospace;
   white-space: pre-wrap;
 }
+#output {
+  counter-reset: css-counter 0;
+}
 p {
   font-size: 1rem;
+  counter-increment: css-counter 1;
+  position: relative;
+}
+p:before {
+  content: counter(css-counter);
+  position: absolute;
+  font-size: 0.8rem;
+  opacity: 0.5;
+  inset: -2rem 0 auto 0;
+  text-align: center;
 }
 hr {
   border: 0;

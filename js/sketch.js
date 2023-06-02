@@ -19,9 +19,20 @@ let replaceTags = (str) => {
       (s) => genders[/o/.test(s) ? +g2 : +g1][s.slice(2, 3) - 1][+g3]
     )
     .split("\n")
-    .map((l) => l.charAt(0).toUpperCase() + l.slice(1))
+    .map((l) =>
+      l.replace(/^(?:[^a-zA-Z]*([a-zA-Z]))/gm, (x) => x.toUpperCase())
+    )
     .join("\n");
 };
+
+// var re = /(\b[a-z](?!\s))/;
+// var re = ;
+// var s =
+//   "fort collins\n\"croton-on-hudson\"\nharper's ferry\ncoeur d'alene\no'fallon";
+// s = s.replace(/^(?:[^a-zA-Z]*([a-zA-Z]))/gm, function (x) {
+//   return x.toUpperCase();
+// });
+// console.log(s); // "Fort Collins, Croton-On-Hudson, Harper's Ferry, Coeur D'Alene, O'Fallon"
 
 let copy = replaceTags(t);
 

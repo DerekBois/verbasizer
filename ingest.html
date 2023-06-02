@@ -17,9 +17,14 @@
   <form id="submit-form">
     <textarea id="ingest" style="width: 100%; height: 500px"></textarea>
     <button style="display: block; padding: 0.5rem 1.2rem">Process</button>
+    <button style="display: block; padding: 0.5rem 1.2rem" type="button" onclick="copy()">Copy Output</button>
   </form>
   <div id="process-output"></div>
   <script>
+    const copy = () => {
+      const text = document.getElementById("process-output").innerHTML;
+      navigator.clipboard.writeText(text);
+    }
     const form = document.getElementById("submit-form");
     const output = document.getElementById("process-output");
 
@@ -40,7 +45,6 @@
         .forEach((v) => {
           output.innerHTML += JSON.stringify(v).replace(/"/g, "`") + ",\n";
         });
-
       return false;
     };
   </script>

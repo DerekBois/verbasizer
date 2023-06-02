@@ -39,34 +39,46 @@
       color: #ff8700;
     }
     p:hover span:nth-child(2) {
-      color: #ffd300;
-    }
-    p:hover span:nth-child(3) {
-      color: #deff0a;
-    }
-    p:hover span:nth-child(4) {
-      color: #a1ff0a;
-    }
-    p:hover span:nth-child(5) {
-      color: #0aff99;
-    }
-    p:hover span:nth-child(6) {
-      color: #0aefff;
-    }
-    p:hover span:nth-child(7) {
-      color: #147df5;
-    }
-    p:hover span:nth-child(8) {
-      color: #580aff;
-    }
-    p:hover span:nth-child(9) {
       color: #be0aff;
     }
-  </style>
-  
+    p:hover span:nth-child(3) {
+      color: #ffd300;
+    }
+    p:hover span:nth-child(4) {
+      color: #580aff;
+    }
+    p:hover span:nth-child(5) {
+      color: #deff0a;
+    }
+    p:hover span:nth-child(6) {
+      color: #147df5;
+    }
+    p:hover span:nth-child(7) {
+      color: #a1ff0a;
+    }
+    p:hover span:nth-child(8) {
+      color: #0aefff;
+    }
+    p:hover span:nth-child(9) {
+      color: #0aff99;
+    }
+    .btn {
+      text-decoration: none;
+      color: #000;
+      background: #ddd;
+      padding: 0.5rem 1.2rem;
+      border-radius: 5px;
+      text-align: center;
+      display: block;
+      width: 3rem;
+      margin-left: auto;
+      margin-bottom: 2rem;
+    }
+    </style>
   <title>Verbisizer</title>
 </head>
 <body>
+  <a class="btn" href="final.html">Demo</a>
   <div id="output"></div>
 </body>
   <script>
@@ -83,7 +95,6 @@
         .replaceAll(rx, (s) => {
           let t = s.replace("^", "");
           if (/^g\d/.test(t)) return s;
-          console.log(t);
           return `<span>${
             tags[t][Math.floor(R.random_dec() * tags[t].length)]
           }</span>`;

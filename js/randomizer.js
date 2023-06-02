@@ -13,7 +13,7 @@ function genTokenData(projectNum) {
 }
 let tokenData = genTokenData(123);
 
-export class Random {
+class Random {
   constructor() {
     this.useA = false;
     let sfc32 = function (uint128Hex) {

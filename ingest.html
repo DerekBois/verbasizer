@@ -33,9 +33,10 @@
     );
 
     form.onsubmit = () => {
-      document
-        .getElementById("ingest")
-        .value.replaceAll(/<(.*?)>/g, (_, s) => {
+      document.getElementById("ingest").value
+        .replaceAll("noun phrase prep, a", "noun phrase, a")
+        .replaceAll("noun phrase prep, t", "noun phrase, t")
+        .replaceAll(/<(.*?)>/g, (_, s) => {
           if (/^g\d/.test(s)) {
             return `^${s.replace("s", "")}`;
           }

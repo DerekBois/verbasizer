@@ -3,126 +3,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
   <script src="./js/randomizer.js"></script>
   <script src="./js/data.js"></script>
-  <style>
-    body {
-      padding: 3rem 5%;
-      font-family: monospace;
-      white-space: pre-wrap;
-    }
-    #output {
-      counter-reset: css-counter 0;
-    }
-    p {
-      font-size: 1rem;
-      counter-increment: css-counter 1;
-      position: relative;
-    }
-    p:before {
-      content: counter(css-counter);
-      position: absolute;
-      font-size: 0.8rem;
-      opacity: 0.5;
-      inset: -2rem 0 auto 0;
-      text-align: center;
-    }
-    hr {
-      border: 0;
-      border-top: 1px solid lightgrey;
-      margin-block: 4rem;
-    }
-    p:hover span {
-      color: #ff0000;
-    }
-    p:hover span:nth-child(1) {
-      color: #ff8700;
-    }
-    p:hover span:nth-child(2) {
-      color: #be0aff;
-    }
-    p:hover span:nth-child(3) {
-      color: #ffd300;
-    }
-    p:hover span:nth-child(4) {
-      color: #580aff;
-    }
-    p:hover span:nth-child(5) {
-      color: #deff0a;
-    }
-    p:hover span:nth-child(6) {
-      color: #147df5;
-    }
-    p:hover span:nth-child(7) {
-      color: #a1ff0a;
-    }
-    p:hover span:nth-child(8) {
-      color: #0aefff;
-    }
-    p:hover span:nth-child(9) {
-      color: #0aff99;
-    }
-    .btn {
-      text-decoration: none;
-      color: #000;
-      background: #ddd;
-      padding: 0.5rem 1.2rem;
-      border-radius: 5px;
-      text-align: center;
-      display: block;
-      width: 3rem;
-      margin-left: auto;
-      margin-bottom: 2rem;
-    }
-    </style>
-  <title>Verbisizer</title>
+  <script src="./js/p5.min.js"></script>
+  <script src="./js/sketch.js"></script>
+  <title>Verbasizer</title>
 </head>
 <body>
-  <a class="btn" href="final.html">Demo</a>
-  <div id="output"></div>
+  <nav>
+    <a class="btn" href="index.html">Demo</a>
+    <a class="btn" href="list.html">List</a>
+    <a class="btn" href="ingest.html">Ingest</a>
+  </nav>
+  <main>
+  </main>
 </body>
-  <script>
-    let R = new Random();
-
-    let replaceTags = (str) => {
-      let rx = /\^\w+\b/g;
-      let g1 = R.random_bool(0.5);
-      let g2 = R.random_bool(0.5);
-      let g3 = R.random_bool(0.5);
-      g2 = g1 && g2 ? !g2 : g2;
-
-      return str
-        .replaceAll(rx, (s) => {
-          let t = s.replace("^", "");
-          if (/^g\d/.test(t)) return s;
-          return `<span>${
-            tags[t][Math.floor(R.random_dec() * tags[t].length)]
-          }</span>`;
-        })
-        .replaceAll(
-          rx,
-          (s) =>
-            `<span>${
-              genders[/o/.test(s) ? +g2 : +g1][s.slice(2, 3) - 1][+g3]
-            }</span>`
-        );
-    };
-
-    // Replace the numbers used in the template with readable tags
-    // for the reference output
-    let replaceNums = (temp) =>
-      temp.replaceAll(/\^\w+\b/g, (s) => {
-        let t = s.replace("^", "");
-        if (/^g\d/.test(t)) {
-          let final = /o/.test(t) ? t : t + "s";
-          return `&lt${final}&gt`;
-        }
-        return `&lt${lookup[t]}&gt`;
-      });
-
-    templates.forEach((template) => {
-      document.querySelector("#output").innerHTML +=
-        `<p>${replaceTags(template)}</p>` + replaceNums(template) + "<hr/>";
-    });
-  </script>
 </html>

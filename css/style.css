@@ -1,0 +1,27 @@
+body {
+  font-family: monospace;
+  margin: 0;
+  font-family: monospace;
+}
+
+main {
+  padding: 1rem;
+}
+
+nav {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+nav .btn {
+  text-decoration: none;
+  color: #000;
+  background: #ddd;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  text-align: center;
+}

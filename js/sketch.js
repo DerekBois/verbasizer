@@ -81,8 +81,8 @@ function setup() {
   paperTexture();
 
   textBlotch();
-  paperStrip();
-  paperStrip2();
+  // paperStrip();
+  // paperStrip2();
   textStrips();
 }
 
@@ -181,7 +181,6 @@ function textStrips() {
 
     let rectX = copyX - border * 4 + angle;
     let rectY = pos - border * 2;
-
     push();
     noStroke();
     fill(108, 5, 83);
@@ -193,6 +192,7 @@ function textStrips() {
 
     pos += fSize * multiple + leading;
   });
+  // filter(INVERT);
 }
 
 function backgroundText() {

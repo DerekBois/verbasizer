@@ -25,3 +25,7 @@ nav .btn {
   border-radius: 5px;
   text-align: center;
 }
+
+#process-output {
+  white-space: pre-wrap;
+}

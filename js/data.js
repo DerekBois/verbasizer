@@ -521,7 +521,7 @@ const tags = [
     `You pay him for a bushel, And you don't get a peck.`,
     `Then George Penny's renters, they come into town.`,
     `With their hands in their pockets, and their heads hanging down.`,
-    `Your mortgage is due And ^g1 looking for my pay.`,
+    `Your mortgage is due and ^g1 looking for my pay.`,
     `Goes down in ^g2o pocket with a trembling hand.`,
     `Can't pay you all but ^g1 will pay you what ^g1 can.`,
     `Then to the telephone the merchant makes a call.`,
@@ -593,8 +593,8 @@ const tags = [
     `^g1 would not take me for ^g2o bride.`,
   ],
 ];
+
 const templates = [
-  ...Array(7).fill(`^19\n^19\n^19\n^19`),
   `^14 ^g1 ^18\nWhere ^g1o ^12\nAnd when ^g1 ^17\nSaid, ^19`,
   `^19\n^g1 ^18\n^2`,
   `^19\n^5, ^9\n^g1o ^17 there`,
@@ -624,4 +624,5 @@ const templates = [
   `^g1 ^17, ^2 ^g1 ^17, ^2\n^g1 ^17, ^2 ^g1 ^17, ^2\n^g1 ^17, ^2 ^g1 ^17, ^2\n^g1 ^17, ^4`,
   `^g1 ^12 and ^g1 ^12\n^g1o ^12, ^0\n^g1 ^12 ^13\n^13`,
   `^g1 ^12 and ^16\n^g1 ^12, ^5 \n^g1o ^12\n^g1 ^12, ^2\n^4\n^5 is ^5`,
+  ...Array(7).fill(`^19\n^19\n^19\n^19`),
 ];
